@@ -1849,12 +1849,12 @@ ST_FUNC void gen_opf(int op)
         case '+': func = TOK___addtf3; break;
         case '-': func = TOK___subtf3; break;
         case '/': func = TOK___divtf3; break;
-        case TOK_EQ: func = TOK___eqtf2; cond = 1; break;
-        case TOK_NE: func = TOK___netf2; cond = 0; break;
-        case TOK_LT: func = TOK___lttf2; cond = 10; break;
-        case TOK_GE: func = TOK___getf2; cond = 11; break;
-        case TOK_LE: func = TOK___letf2; cond = 12; break;
-        case TOK_GT: func = TOK___gttf2; cond = 13; break;
+        case TOK_EQ: func = TOK___eqtf2; cond = 0; break;
+        case TOK_NE: func = TOK___netf2; cond = 1; break;
+        case TOK_GE: func = TOK___getf2; cond = 10; break;
+        case TOK_LT: func = TOK___lttf2; cond = 11; break;
+        case TOK_GT: func = TOK___gttf2; cond = 12; break;
+        case TOK_LE: func = TOK___letf2; cond = 13; break;
         default: assert(0); break;
         }
         vpush_helper_func(func);
